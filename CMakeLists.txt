@@ -5,11 +5,11 @@ SET(MODULE_NAME niftyregExtension) # Do not use 'project()'
 
 #-----------------------------------------------------------------------------
 SET(MODULE_HOMEPAGE "http://www.slicer.org/slicerWiki/index.php/Documentation/Snapshot/Developers/Tutorials/ExtensionWriting")
-SET(MODULE_CATEGORY "Examples")
+SET(MODULE_CATEGORY "Registration")
 SET(MODULE_STATUS "Beta")
 SET(MODULE_CONTRIBUTORS "Sonia Pujol, Ph.D. (Harvard)  and Marc Modat,
 Ph.D. (UCL)")
-SET(MODULE_DESCRIPTION "This is an example of CLI module built as an extension")
+SET(MODULE_DESCRIPTION "Interface to NiftyReg package")
 SET(MODULE_ICONURL "http://viewvc.slicer.org/viewvc.cgi/Slicer4/trunk/Extensions/Testing/niftyregExtension/niftyregExtension.png?revision=19437&view=co")
 SET(MODULE_SCREENSHOTURLS "http://wiki.slicer.org/slicerWiki/images/a/ab/Slicer-r19441-niftyregExtension-screenshot.png http://wiki.slicer.org/slicerWiki/images/1/1e/Slicer-r19441-niftyregExtension-screenshot-2.png")
 SET(MODULE_ACKNOWLEDGEMENTS "This work was supported by ...")
