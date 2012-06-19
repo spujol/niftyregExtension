@@ -1,29 +1,29 @@
 cmake_minimum_required(VERSION 2.8.7)
 
 #-----------------------------------------------------------------------------
-set(MODULE_NAME niftyregExtension) # Do not use 'project()'
+SET(MODULE_NAME niftyregExtension) # Do not use 'project()'
 
 #-----------------------------------------------------------------------------
-set(MODULE_HOMEPAGE "http://www.slicer.org/slicerWiki/index.php/Documentation/Snapshot/Developers/Tutorials/ExtensionWriting")
-set(MODULE_CATEGORY "Examples")
-set(MODULE_STATUS "Beta")
-set(MODULE_CONTRIBUTORS "Julien Jomier (Kitware), Stephen Aylward (Kitware), Jean-Christophe Fillion-Robin (Kitware)")
-set(MODULE_DESCRIPTION "This is an example of CLI module built as an extension")
-set(MODULE_ICONURL "http://viewvc.slicer.org/viewvc.cgi/Slicer4/trunk/Extensions/Testing/niftyregExtension/niftyregExtension.png?revision=19437&view=co")
-set(MODULE_SCREENSHOTURLS "http://wiki.slicer.org/slicerWiki/images/a/ab/Slicer-r19441-niftyregExtension-screenshot.png http://wiki.slicer.org/slicerWiki/images/1/1e/Slicer-r19441-niftyregExtension-screenshot-2.png")
-set(MODULE_ACKNOWLEDGEMENTS "This work was supported by ...")
-set(MODULE_MAJOR_VERSION 0)
-set(MODULE_MINOR_VERSION 1)
-set(MODULE_PATCH_VERSION 0)
+SET(MODULE_HOMEPAGE "http://www.slicer.org/slicerWiki/index.php/Documentation/Snapshot/Developers/Tutorials/ExtensionWriting")
+SET(MODULE_CATEGORY "Examples")
+SET(MODULE_STATUS "Beta")
+SET(MODULE_CONTRIBUTORS "Pr. Sonia Pujol and her assistant Marc Modat")
+SET(MODULE_DESCRIPTION "This is an example of CLI module built as an extension")
+SET(MODULE_ICONURL "http://viewvc.slicer.org/viewvc.cgi/Slicer4/trunk/Extensions/Testing/niftyregExtension/niftyregExtension.png?revision=19437&view=co")
+SET(MODULE_SCREENSHOTURLS "http://wiki.slicer.org/slicerWiki/images/a/ab/Slicer-r19441-niftyregExtension-screenshot.png http://wiki.slicer.org/slicerWiki/images/1/1e/Slicer-r19441-niftyregExtension-screenshot-2.png")
+SET(MODULE_ACKNOWLEDGEMENTS "This work was supported by ...")
+SET(MODULE_MAJOR_VERSION 0)
+SET(MODULE_MINOR_VERSION 1)
+SET(MODULE_PATCH_VERSION 0)
 
 #-----------------------------------------------------------------------------
-if(NOT Slicer_SOURCE_DIR)
-  find_package(Slicer REQUIRED)
-  include(${Slicer_USE_FILE})
-endif()
+IF(NOT Slicer_SOURCE_DIR)
+  FIND_PACKAGE(Slicer REQUIRED)
+  INCLUDE(${Slicer_USE_FILE})
+ENDIF()
 
 # Configure XML description
-configure_file(
+CONFIGURE_FILE(
   ${MODULE_NAME}.xml.in
   ${CMAKE_CURRENT_BINARY_DIR}/${MODULE_NAME}.xml
   @ONLY
@@ -33,13 +33,13 @@ configure_file(
 #add_subdirectory(Logic)
 
 #-----------------------------------------------------------------------------
-set(MODULE_INCLUDE_DIRECTORIES
+SET(MODULE_INCLUDE_DIRECTORIES
   )
 
-set(MODULE_SRCS
+SET(MODULE_SRCS
   )
 
-set(MODULE_TARGET_LIBRARIES
+SET(MODULE_TARGET_LIBRARIES
   ${ITK_LIBRARIES}
   )
 
@@ -54,11 +54,11 @@ SEMMacroBuildCLI(
   )
 
 #-----------------------------------------------------------------------------
-if(BUILD_TESTING)
-  add_subdirectory(Testing)
-endif()
+IF(BUILD_TESTING)
+  ADD_SUBDIRECTORY(Testing)
+ENDIF()
 
 #-----------------------------------------------------------------------------
 if(NOT Slicer_SOURCE_DIR)
-  include(${Slicer_EXTENSION_CPACK})
+  INCLUDE(${Slicer_EXTENSION_CPACK})
 endif()
